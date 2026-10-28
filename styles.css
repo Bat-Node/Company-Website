@@ -305,3 +305,190 @@ nav a:hover{
   .individual-card:hover, .placeholder-box:hover, .button:hover { transform: none; }
 }
 [hidden] { display: none !important; }
+
+/* =========================================
+   SEÇÃO DE ATENDIMENTOS
+========================================= */
+
+.section-atendimentos {
+  padding-block: 64px;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.section-atendimentos h2 {
+  margin-bottom: 24px;
+}
+
+.atendimentos-intro {
+  max-width: 680px;
+  margin-bottom: 32px;
+  color: var(--muted);
+}
+
+/* BOTÃO SAIBA MAIS */
+
+.atendimento-button {
+  margin-top: 24px;
+  border: none;
+  font-size: 0.875rem;
+}
+
+/* PAINEL DE DETALHES */
+
+.atendimento-detalhes {
+  margin-top: 32px;
+  padding: 32px;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  animation: atendimento-entrada 0.3s ease;
+}
+
+.atendimento-detalhes-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.atendimento-detalhes-header h3 {
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+.atendimento-detalhes h4 {
+  font-family: var(--font-title);
+  color: var(--text);
+  margin: 24px 0 12px;
+  font-size: 1.1rem;
+}
+
+.atendimento-detalhes p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.atendimento-detalhes ul {
+  padding-left: 24px;
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+.atendimento-detalhes li {
+  margin-bottom: 8px;
+}
+
+/* BOTÃO FECHAR */
+
+.atendimento-fechar {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  transition: 0.3s ease;
+}
+
+.atendimento-fechar:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--surface);
+}
+
+/* ANIMAÇÃO */
+
+@keyframes atendimento-entrada {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 700px) {
+
+  .section-atendimentos {
+    padding-block: 48px;
+  }
+
+  .atendimento-detalhes {
+    padding: 20px;
+  }
+
+  .atendimento-detalhes-header h3 {
+    font-size: 1.2rem;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .atendimento-detalhes {
+    animation: none;
+  }
+}
+
+
+/* TEXTO DO RELATÓRIO DE ATENDIMENTO */
+
+.atendimento-detalhes > h3 {
+  font-family: var(--font-title);
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  color: var(--text);
+  margin-bottom: 28px;
+}
+
+.atendimento-detalhes p + p {
+  margin-top: 16px;
+}
+
+.atendimento-detalhes li strong {
+  color: var(--text);
+}
+
+.atendimento-detalhes h4 {
+  color: var(--accent);
+}
+
+.atendimento-detalhes {
+  scroll-margin-top: 110px;
+}
+
+
+/* RELATÓRIO DO ATENDIMENTO */
+
+.atendimento-detalhes > h3 {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  color: var(--text);
+  margin-bottom: 28px;
+}
+
+.atendimento-detalhes p + p {
+  margin-top: 16px;
+}
+
+.atendimento-detalhes h4 {
+  color: var(--accent);
+}
+
+.atendimento-detalhes li strong {
+  color: var(--text);
+}
+
+.atendimento-detalhes a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.atendimento-detalhes {
+  scroll-margin-top: 110px;
+}

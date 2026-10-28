@@ -86,3 +86,40 @@ if (contactForm) {
     status.textContent = 'Continuando para a verificação e confirmação do envio…';
   });
 }
+
+/* =========================================
+   ATENDIMENTOS - SAIBA MAIS
+========================================= */
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const botao = document.querySelector(
+    '[data-atendimento="pizzaria"]'
+  );
+
+  const detalhes = document.getElementById(
+    "detalhes-pizzaria"
+  );
+
+  const fechar = detalhes?.querySelector(
+    ".atendimento-fechar"
+  );
+
+  if (!botao || !detalhes || !fechar) return;
+
+  botao.addEventListener("click", () => {
+    detalhes.hidden = false;
+    botao.setAttribute("aria-expanded", "true");
+
+    detalhes.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  });
+
+  fechar.addEventListener("click", () => {
+    detalhes.hidden = true;
+    botao.setAttribute("aria-expanded", "false");
+    botao.focus();
+  });
+});

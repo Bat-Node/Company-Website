@@ -24,11 +24,12 @@
       </a>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu" hidden>Menu</button>
       <nav id="menu" aria-label="Navegação principal">
-        <a href="#inicio">Início</a>
-        <a href="#sobre">Sobre Nós</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#contatos">Contatos</a>
-      </nav>
+  <a href="#inicio">Início</a>
+  <a href="#sobre">Sobre Nós</a>
+  <a href="#servicos">Serviços</a>
+  <a href="#atendimentos">Atendimentos</a>
+  <a href="#contatos">Contatos</a>
+</nav>
     </div>
   </header>
 
@@ -96,8 +97,8 @@ Nosso compromisso é construir relações de confiança, com transparência, ded
   <!-- 3. SEÇÃO DE SERVIÇOS E EXPERIÊNCIAS -->
   <section id="servicos" class="section-services section-alt">
     <div class="container">
-      <h2 class="section-heading"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-14-2 18"/></svg><span>Nossos serviços<br>e experiências</span></h2>
-      
+      <h2 class="section-heading"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-14-2 18"/></svg><span>Nossas<br>experiências</span></h2>
+
       <section class="experiencesandservices" aria-labelledby="experiences-title">
         <h3 id="experiences-title">Experiências</h3>
         <div class="project-grid">
@@ -144,6 +145,9 @@ Nosso compromisso é construir relações de confiança, com transparência, ded
         </div>
       </section>
     </div>
+<br>
+<br>
+  
 
   <!-- SERVIÇOS -->
   <section class="experiencesandservices" aria-labelledby=>
@@ -156,6 +160,288 @@ Nosso compromisso é construir relações de confiança, com transparência, ded
     </ul>
   </section>
 </section>
+
+
+
+<!-- ATENDIMENTOS -->
+<section id="atendimentos" class="section-atendimentos">
+  <div class="container">
+
+    <h2 class="section-heading">
+      <svg class="icon" viewBox="0 0 24 24"
+        fill="none" stroke="currentColor"
+        stroke-width="1.7" stroke-linecap="round"
+        stroke-linejoin="round" aria-hidden="true">
+        <rect x="3" y="4" width="18" height="16" rx="2"/>
+        <path d="M7 9h10M7 13h6M7 17h4"/>
+      </svg>
+      Atendimentos
+    </h2>
+
+    <p class="atendimentos-intro">
+      Conheça os atendimentos realizados pela BatNode,
+      com soluções técnicas para desafios reais.
+    </p>
+
+    <div class="project-grid">
+
+      <article class="project-card">
+        <div class="project-card-heading">
+          <h4>
+            Mitigação Emergencial: Como a BatNode
+            neutralizou um Backdoor na
+            Pizzaria & Burger Express
+          </h4>
+        </div>
+
+        <div class="project-card-heading">
+          <p class="project-description">
+            Resposta a incidente de segurança,
+            identificação de código malicioso e
+            mitigação de vulnerabilidades em um
+            microsserviço de autenticação e
+            processamento de pedidos.
+          </p>
+
+          <button
+            class="button atendimento-button"
+            type="button"
+            data-atendimento="pizzaria"
+            aria-expanded="false"
+            aria-controls="detalhes-pizzaria">
+            Saiba mais
+          </button>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- RELATÓRIO COMPLETO -->
+    <div id="detalhes-pizzaria"
+         class="atendimento-detalhes"
+         hidden>
+
+      <div class="atendimento-detalhes-header">
+        <h3>Pizzaria & Burger Express</h3>
+
+        <button
+          class="atendimento-fechar"
+          type="button"
+          aria-label="Fechar detalhes">
+          &times;
+        </button>
+      </div>
+
+      <h3>
+        Resposta a Incidente de Segurança:
+        Identificação e Neutralização de Backdoor
+        em Microsserviço de Autenticação
+      </h3>
+
+      <h4>Contextualização do incidente</h4>
+
+      <p>
+        Durante uma auditoria de segurança em um
+        microsserviço responsável pelo processamento
+        de pedidos e pela autenticação de usuários,
+        nossa equipe identificou um trecho de código
+        suspeito que representava um risco significativo
+        à integridade e à confidencialidade do sistema.
+      </p>
+
+      <p>
+        A vulnerabilidade estava relacionada a um
+        possível ataque à cadeia de suprimentos de
+        software, no qual códigos maliciosos são
+        introduzidos em aplicações legítimas durante
+        o desenvolvimento, a manutenção ou a
+        distribuição de componentes. O mecanismo
+        identificado permitia que comandos enviados
+        remotamente fossem decodificados e executados
+        pelo servidor, caracterizando uma possível
+        porta dos fundos (<em>backdoor</em>) e uma
+        vulnerabilidade de execução remota de código
+        (RCE).
+      </p>
+
+      <p>
+        Caso explorada, essa falha poderia possibilitar
+        a execução de instruções não autorizadas,
+        o comprometimento de informações sensíveis
+        e a utilização indevida dos recursos do
+        ambiente afetado.
+      </p>
+
+      <h4>Contexto internacional: vulnerabilidades no PHP</h4>
+
+      <p>
+        Em outubro de 2026, a comunidade internacional
+        de segurança cibernética foi alertada sobre
+        duas vulnerabilidades críticas na linguagem
+        PHP, amplamente utilizada no desenvolvimento
+        de aplicações e sistemas web.
+      </p>
+
+      <p>
+        Identificadas como CVE-2026-109618 e
+        CVE-2026-109619, essas falhas estavam
+        relacionadas ao gerenciamento de memória
+        e ao processamento de requisições.
+        Em determinadas condições, poderiam permitir
+        a execução remota de código por invasores
+        sem necessidade de autenticação.
+      </p>
+
+      <p>
+        A gravidade da situação levou organizações
+        e instituições governamentais a adotarem
+        medidas emergenciais de proteção.
+        No Brasil, órgãos federais receberam
+        orientações para atualizar seus ambientes
+        e restringir temporariamente o acesso
+        a sistemas potencialmente vulneráveis.
+      </p>
+
+      <p>
+        Esse episódio reforçou a importância de
+        auditorias preventivas, atualizações de
+        segurança e monitoramento contínuo de
+        aplicações web. Embora apresente riscos
+        semelhantes aos observados no atendimento
+        da Pizzaria & Burger Express, não há
+        comprovação de que as vulnerabilidades
+        globais do PHP tenham sido a causa direta
+        do backdoor identificado pela equipe.
+      </p>
+
+      <h4>Atuação da consultoria</h4>
+
+      <p>
+        Diante do risco identificado, a equipe
+        técnica iniciou um procedimento estruturado
+        de resposta ao incidente, priorizando a
+        contenção da ameaça, a preservação das
+        evidências e a recuperação segura do serviço.
+      </p>
+
+      <p>As principais etapas executadas foram:</p>
+
+      <ul>
+        <li>
+          <strong>Identificação e análise:</strong>
+          inspeção do código-fonte para localizar
+          instruções suspeitas, mecanismos de
+          decodificação de dados e chamadas capazes
+          de executar comandos arbitrários.
+        </li>
+
+        <li>
+          <strong>Preservação de evidências:</strong>
+          registro dos trechos relevantes por meio
+          de capturas de tela, cópias controladas
+          dos arquivos e documentação técnica do
+          comportamento identificado, mantendo a
+          integridade dos registros.
+        </li>
+
+        <li>
+          <strong>Isolamento e investigação:</strong>
+          preparação de um ambiente controlado de
+          testes, separado dos sistemas de produção,
+          para analisar o comportamento do código
+          sem expor dados ou serviços reais.
+        </li>
+
+        <li>
+          <strong>Engenharia reversa do trecho suspeito:</strong>
+          análise do fluxo de execução para compreender
+          como o conteúdo recebido por cabeçalhos HTTP
+          poderia ser transformado em comandos executáveis.
+        </li>
+
+        <li>
+          <strong>Correção e mitigação:</strong>
+          remoção do mecanismo de execução arbitrária,
+          revisão das validações de entrada e
+          implementação de correções para impedir
+          que requisições externas acionassem
+          funcionalidades não autorizadas.
+        </li>
+
+        <li>
+          <strong>Validação de segurança:</strong>
+          realização de testes para confirmar a
+          remoção do comportamento malicioso e
+          verificar se as funções legítimas de
+          autenticação e processamento de pedidos
+          continuavam operacionais.
+        </li>
+      </ul>
+
+      <h4>Resultados obtidos</h4>
+
+      <p>
+        A intervenção teve como objetivo eliminar
+        o vetor de exploração identificado e
+        restabelecer condições seguras de
+        funcionamento para o microsserviço.
+      </p>
+
+      <p>
+        Com a correção aplicada e validada,
+        espera-se reduzir significativamente
+        o risco de execução remota de código,
+        preservar a confidencialidade dos dados
+        sensíveis e manter a continuidade das
+        operações legítimas.
+      </p>
+
+      <p>
+        A documentação do incidente também
+        contribui para aprimorar os procedimentos
+        de auditoria, monitoramento e prevenção,
+        fortalecendo a capacidade de resposta
+        a ameaças futuras.
+      </p>
+
+      <h4>Compromisso com a segurança</h4>
+
+      <p>
+        Este caso demonstra a importância de
+        auditorias contínuas, análise criteriosa
+        do código-fonte e adoção de práticas
+        seguras de desenvolvimento. Nossa
+        consultoria atua na identificação de
+        vulnerabilidades, na resposta estruturada
+        a incidentes e na implementação de medidas
+        preventivas, buscando garantir a
+        confiabilidade dos sistemas e a proteção
+        das informações de nossos clientes.
+      </p>
+
+      <h4>Referências sobre o incidente global</h4>
+
+      <ul>
+        <li>
+          <a href="https://www.gov.br/gsi/pt-br/assuntos/ctir/alertas/2026/alerta-93-2026/"
+             target="_blank" rel="noopener noreferrer">
+            CTIR Gov — Alerta 93/2026
+          </a>
+        </li>
+        <li>
+          <a href="https://www.cert.europa.eu/publications/security-advisories/2026-018"
+             target="_blank" rel="noopener noreferrer">
+            CERT-EU — Critical Vulnerabilities in PHP
+          </a>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+</section>
+
+
 
   <!-- 4. SEÇÃO DE CONTATOS -->
   <section id="contatos" class="section-contacts">
