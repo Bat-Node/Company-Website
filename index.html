@@ -142,24 +142,69 @@ Nosso compromisso é construir relações de confiança, com transparência, ded
               <p class="project-description">Com essas melhorias, buscamos eliminar travamentos, evitar cobranças incorretas e garantir maior confiabilidade ao sistema.</p>
             </div>
           </article>
+                    <!-- Card de Atendimento: TechStore Informática -->
+          <article class="project-card">
+            <div class="project-card-heading-noimg">
+              <h4>TechStore Informática</h4>
+            </div>
+            <div class="project-card-heading-noimg">
+              <p class="project-description">Modernização arquitetural e desenvolvimento do ecossistema integrado para a gestão de ativos e faturamento transacional comercial.</p>
+              <p class="project-description">Implementação de controle de acesso rigoroso por perfil (RBAC) e checkout inteligente com garantia de atomicidade de dados (ACID).</p>
+            </div>
+            <button class="button saiba-mais-btn" type="button" onclick="document.getElementById('modal-techstore').showModal()">Saiba mais</button>
+          </article>
+
+          <!-- Modal Detalhado (Saiba mais) da TechStore Informática -->
+          <dialog id="modal-techstore" class="project-modal">
+            <div class="modal-content">
+              <header class="modal-header">
+                <h3>TechStore Informática — Evolução do Ecossistema Operacional</h3>
+                <button class="close-button" type="button" onclick="document.getElementById('modal-techstore').close()" aria-label="Fechar modal">✕</button>
+              </header>
+              
+              <div class="modal-body">
+                <!-- Parte 1: Trabalho da Semana Passada -->
+                <section class="modal-section">
+                  <h4>Fase 1: Núcleo de Inventário (TechStock Manager)</h4>
+                  <p>Nossa equipe projetou e entregou o TechStock Manager, uma plataforma web robusta desenvolvida em Python para centralizar e automatizar o controle de ativos físicos (hardware) e digitais (licenças de software). A solução resolveu gargalos operacionais críticos de inconsistência de saldo e risco de ruptura através de um banco de dados relacional com integridade estrita, interligando categorias, fornecedores, produtos e um histórico auditável de movimentações.</p>
+                  <p>O sistema conta com um dashboard consolidado baseado em consultas estruturadas que emite alertas visuais automáticos de "Risco de Ruptura / Reposição Necessária" sempre que um item atinge o estoque mínimo de segurança. Além disso, o painel orquestra fluxos dinâmicos de entrada e saída com validação preventiva no backend para impedir saldos negativos e trata violações de chave estrangeira de forma amigável na interface, garantindo uma governança logística segura, livre de erros de servidor e totalmente pronta para apoiar a escalabilidade comercial do cliente.</p>
+                </section>
+
+                <hr class="modal-divider">
+
+                <!-- Parte 2: Trabalho Desta Semana -->
+                <section class="modal-section">
+                  <h4>Fase 2: Módulo Comercial, Checkout Transacional e RBAC</h4>
+                  <p>Com o sucesso da homologação do núcleo de inventário, expandimos o ecossistema para o provisionamento do módulo comercial mais sensível da operação: o faturamento B2B e o balcão corporativo. A evolução da plataforma eliminou gargalos crônicos relacionados à transacionalidade e à segurança da informação.</p>
+                  <h5>Principais engenhas e critérios atendidos:</h5>
+                  <ul>
+                    <li><strong>Autenticação e Segregação de Funções (RBAC):</strong> Implementação de login seguro com sessão persistente e criptografia em hash de via única. Divisão de perfis onde o <em>Operador</em> gerencia o PDV e emite recibos de balcão (sem permissão de reajustes), enquanto o <em>Gerente</em> detém acesso irrestrito para auditorias, relatórios financeiros e cancelamento de transações.</li>
+                    <li><strong>Checkout Transacional com Garantia ACID:</strong> Blindagem completa contra inconsistências através de transações explícitas no backend (<code>BEGIN TRANSACTION / COMMIT / ROLLBACK</code>). O registro de vendas, a inclusão do carrinho (tabela <code>Itens_Venda</code> com preço unitário congelado de forma histórica), a baixa no estoque de produtos e os lançamentos no livro-razão ocorrem de forma estritamente atômica. Se faltar saldo de qualquer item no microssegundo final, toda a operação sofre <code>ROLLBACK</code> para inviabilizar estoques negativos.</li>
+                    <li><strong>Recibo de Faturamento Formal:</strong> Desenvolvimento de uma interface elegante e limpa, otimizada para impressão física e visualização clara, detalhando dados da TechStore, operador responsável, identificadores únicos e <em>badges</em> visuais para diferenciação imediata entre componentes de hardware e licenças corporativas digitais.</li>
+                  </ul>
+                </section>
+              </div>
+            </div>
+          </dialog>
+
         </div>
       </section>
-    </div>
 <br>
 <br>
   
-
   <!-- SERVIÇOS -->
-  <section class="experiencesandservices" aria-labelledby=>
-    <h3 class="section-heading" id="services-title">Serviços</h3>
+  <section class="experiencesandservices" aria-labelledby="services-title">
+        <h3 id="services-title">Serviços</h3>
 
-    <ul class="services-grid">
-      <li>Aplicações web</li>
-      <li>Desenvolvimento de sites</li>
-      <li>Manutenção de aplicações</li>
-    </ul>
-  </section>
-</section>
+        <ul class="services-grid">
+          <li>Aplicações web</li>
+          <li>Desenvolvimento de sites</li>
+          <li>Manutenção de aplicações</li>
+        </ul>
+      </section>
+
+    </div> <!-- fecha .container -->
+  </section> <!-- fecha #servicos -->
 
 
 
