@@ -123,3 +123,26 @@ document.addEventListener("DOMContentLoaded", () => {
     botao.focus();
   });
 });
+
+/* NAVBAR: destaca o link da seção que está na tela */
+(function () {
+  const links = [...menu.querySelectorAll('a[href^="#"]')];
+  const map = new Map();
+
+  links.forEach(link => {
+    const section = document.getElementById(link.getAttribute('href').slice(1));
+    if (section) map.set(section, link);
+  });
+
+  if (!('IntersectionObserver' in window)) return;
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      links.forEach(link => link.removeAttribute('aria-current'));
+      map.get(entry.target).setAttribute('aria-current', 'true');
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+
+  map.forEach((_, section) => observer.observe(section));
+})();
